@@ -52,3 +52,32 @@ header {
   margin-top: 20px;
   color: azure;
 }
+
+#tumericMeals,
+#garamMeals {
+  display: none;
+}
+
+.sections {
+  flex-wrap: wrap;
+  width: 80%;
+  margin: auto;
+  padding-top: 50px;
+  justify-content: space-around;
+}
+
+.mealCard {
+  flex-direction: column;
+  width: 28%;
+  text-align: center;
+}
+
+.mealCard img {
+  width: 100%;
+  height: 60%;
+}
+
+.mealName {
+  justify-content: space-around;
+  align-items: center;
+}
