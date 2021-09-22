@@ -5,7 +5,7 @@ const main = document.getElementById('main');
 const header = document.getElementsByTagName('header');
 const footer = document.getElementsByTagName('footer');
 
-const likesUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/7X6fjvwVL8rklkn24xVW/likes';
+const likesUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/N3qJO6H3DKthRFBBn3Uz/likes/';
 
 export default (mealsDiv, allMeals) => {
   mealsDiv.innerHTML = '';
