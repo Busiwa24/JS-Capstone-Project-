@@ -30,3 +30,30 @@
     width: 60%;
   }
   
+  .comment-container {
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .form-control {
+    width: 50%;
+  }
+  
+  .commentForm {
+    margin-left: 10px;
+  }
+  
+  .close-btn {
+    display: block;
+    float: right;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    width: 40px;
+    height: 40px;
+    background-color: #d5473d;
+    border: none;
+    font-weight: bold;
+    color: azure;
+    border-radius: 0.5rem;
+  }
+   
