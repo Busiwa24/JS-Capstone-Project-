@@ -96,3 +96,7 @@ header {
 .likes {
   margin-left: 150px;
 }
+
+.far {
+  cursor: pointer;
+}
