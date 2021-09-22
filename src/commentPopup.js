@@ -46,3 +46,24 @@ closeBtn.addEventListener('click', () => {
   header[0].style.display = 'flex';
   footer[0].style.display = 'block';
 });
+
+const commentBtn = document.getElementById(data.meals[0].idMeal);
+    const inputName = document.getElementById(data.meals[0].strMeal);
+    const inputComment = document.getElementById(data.meals[0].strIngredient1);
+    commentBtn.addEventListener('click', () => {
+      Meal.postComment(
+        data.meals[0].idMeal,
+        inputName.value,
+        inputComment.value,
+      ).then(() => comments(list, data.meals[0].idMeal));
+      inputName.value = '';
+      inputComment.value = '';
+    });
+
+    const list = document.getElementById(listId);
+    comments(list, data.meals[0].idMeal);
+  });
+};
+
+export default commentPopup;
+/* eslint-enable no-unused-vars, no-use-before-define */
