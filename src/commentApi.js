@@ -1,4 +1,3 @@
-/* eslint-disable import/no-cycle, consistent-return */
 import countComments from './commentCount.js';
 
 class Meal {
@@ -49,4 +48,3 @@ const comments = (list, mealId) => {
   });
 };
 export { Meal, comments };
-/* eslint-enable import/no-cycle, consistent-return */
