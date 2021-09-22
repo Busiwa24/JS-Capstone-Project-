@@ -32,8 +32,8 @@ const commentPopup = (mealId) => {
                               <div class="commentForm form-group">
                                   <div class='add-comment'><h2>Add a comment:</h2></div>
                                   <div><input type="text" id="${data.meals[0].strMeal}" name="name" class="comment-name" placeholder="Your Name"></div><br>
-                                  <div> <textarea id="${data.meals[0].strIngredient1}" name="comment-text" class="textarea-comment" placeholder="Your insight"></textarea></div><br>
-                                  <div><button type="button" id="${data.meals[0].idMeal}" >Submit</button></div>
+                                  <div> <textarea id="${data.meals[0].strIngredient1}" name="comment-text" class="textarea-comment" placeholder="Your Message"></textarea></div><br>
+                                  <div><button type="button" id="${data.meals[0].idMeal}" class='submit' >Add Comment</button></div>
                               </div>
                               </div>
                             </div>`;

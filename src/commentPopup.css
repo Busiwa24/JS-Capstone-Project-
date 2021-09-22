@@ -57,3 +57,17 @@
   color: azure;
   border-radius: 0.5rem;
 }
+
+.submit {
+  padding: 7px 20px;
+  margin-top: 6px;
+  border: 1px solid #d5473d;
+  background-color: #272727;
+  color: rgb(255, 247, 247);
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+}
+
+
+
+
