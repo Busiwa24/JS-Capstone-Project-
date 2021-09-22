@@ -16,7 +16,7 @@ const commentPopup = (mealId) => {
     const commentPopup = document.createElement('div');
     commentPopup.className = 'popup';
     commentPopup.innerHTML = `<button type='button' class='close-btn'>X</button>
-                              <div class='comment-container'>
+                            <div class='comment-container'>
                               <div class='image-div'>
                                 <div class='image-container'><img src="${data.meals[0].strMealThumb}" class='img-fluid'></div>
                               </div>
@@ -28,26 +28,26 @@ const commentPopup = (mealId) => {
                                 <h3 class='counter'>Comments</h3>
                                 <div class='comment-list' id="${listId}"> </div>
                               </div>
-
+                              
                               <div class="commentForm form-group">
-                              <div class='add-comment'><h2>Add a comment:</h2></div>
-                              <div><input type="text" id="${data.meals[0].strMeal}" name="name" class="comment-name" placeholder="Your Name"></div><br>
-                              <div> <textarea id="${data.meals[0].strIngredient1}" name="comment-text" class="textarea-comment" placeholder="Your insight"></textarea></div><br>
-                              <div><button type="button" id="${data.meals[0].idMeal}" >Submit</button></div>
-                          </div>
-                          </div>
-                        </div>`;
+                                  <div class='add-comment'><h2>Add a comment:</h2></div>
+                                  <div><input type="text" id="${data.meals[0].strMeal}" name="name" class="comment-name" placeholder="Your Name"></div><br>
+                                  <div> <textarea id="${data.meals[0].strIngredient1}" name="comment-text" class="textarea-comment" placeholder="Your insight"></textarea></div><br>
+                                  <div><button type="button" id="${data.meals[0].idMeal}" >Submit</button></div>
+                              </div>
+                              </div>
+                            </div>`;
 
-mainContainer.appendChild(commentPopup);
-const closeBtn = document.querySelector('.close-btn');
-closeBtn.addEventListener('click', () => {
-  commentPopup.remove();
-  main.style.display = 'block';
-  header[0].style.display = 'flex';
-  footer[0].style.display = 'block';
-});
+    mainContainer.appendChild(commentPopup);
+    const closeBtn = document.querySelector('.close-btn');
+    closeBtn.addEventListener('click', () => {
+      commentPopup.remove();
+      main.style.display = 'block';
+      header[0].style.display = 'flex';
+      footer[0].style.display = 'block';
+    });
 
-const commentBtn = document.getElementById(data.meals[0].idMeal);
+    const commentBtn = document.getElementById(data.meals[0].idMeal);
     const inputName = document.getElementById(data.meals[0].strMeal);
     const inputComment = document.getElementById(data.meals[0].strIngredient1);
     commentBtn.addEventListener('click', () => {
