@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars, no-use-before-define */
 import './commentPopup.css';
 import getMeals from './apiGet.js';
 import { Meal, comments } from './commentApi.js';
@@ -66,4 +65,3 @@ const commentPopup = (mealId) => {
 };
 
 export default commentPopup;
-/* eslint-enable no-unused-vars, no-use-before-define */
