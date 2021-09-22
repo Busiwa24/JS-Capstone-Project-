@@ -19,7 +19,7 @@ A comment button that opens up a modal and allows users to leave comments.
 
 ### To get a local copy run the following steps:
 
-- [Copy this link](https://github.com/mbdesigns1989/To-do-List/tree/To-Do-list-add-and-remove)
+- [Copy this link](https://github.com/Busiwa24/JS-Capstone-Project-)
 - Open your terminal or command line
 - Run `git clone` and paste the link
 - Open the folder with your code editor
@@ -40,15 +40,15 @@ A comment button that opens up a modal and allows users to leave comments.
 
 ## Author 2
 
-GitHub: (https://github.com/Busiwa24) 
-Twitter: (https://twitter.com/busiwaliuma) 
-LinkedIn: (https://www.linkedin.com/in/busiwa-liuma-28385b80/>)
+- GitHub: (https://github.com/Busiwa24) 
+- Twitter: (https://twitter.com/busiwaliuma) 
+- LinkedIn: (https://www.linkedin.com/in/busiwa-liuma-28385b80/>)
 
 ##  Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/Busiwa24/JS-Capstone-Project-/issues).
 
 ## Show your support
 
