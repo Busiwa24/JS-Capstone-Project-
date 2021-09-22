@@ -1,59 +1,58 @@
 .popup {
-    background-color: rgba(220, 220, 220, 0.707);
-    margin-left: auto;
-    margin-right: auto;
-    top: 0;
-    width: 60%;
-    z-index: 2000;
-    height: 120vh;
-  }
-  
-  .flex-div {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
-  }
-  
-  .image-div {
-    text-align: center;
-    display: flex;
-    margin-top: 50px;
-  }
-  
-  .image-container {
-    margin: 0 auto;
-    width: 100%;
-    color: black;
-  }
-  
-  .image-container img {
-    width: 60%;
-  }
-  
-  .comment-container {
-    padding: 10px;
-    text-align: center;
-  }
-  
-  .form-control {
-    width: 50%;
-  }
-  
-  .commentForm {
-    margin-left: 10px;
-  }
-  
-  .close-btn {
-    display: block;
-    float: right;
-    margin-right: 1rem;
-    margin-top: 1rem;
-    width: 40px;
-    height: 40px;
-    background-color: #d5473d;
-    border: none;
-    font-weight: bold;
-    color: azure;
-    border-radius: 0.5rem;
-  }
-   
+  background-color: rgba(220, 220, 220, 0.707);
+  margin-left: auto;
+  margin-right: auto;
+  top: 0;
+  width: 60%;
+  z-index: 2000;
+  height: 120vh;
+}
+
+.flex-div {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.image-div {
+  text-align: center;
+  display: flex;
+  margin-top: 50px;
+}
+
+.image-container {
+  margin: 0 auto;
+  width: 100%;
+  color: black;
+}
+
+.image-container img {
+  width: 60%;
+}
+
+.comment-container {
+  padding: 10px;
+  text-align: center;
+}
+
+.form-control {
+  width: 50%;
+}
+
+.commentForm {
+  margin-left: 10px;
+}
+
+.close-btn {
+  display: block;
+  float: right;
+  margin-right: 1rem;
+  margin-top: 1rem;
+  width: 40px;
+  height: 40px;
+  background-color: #d5473d;
+  border: none;
+  font-weight: bold;
+  color: azure;
+  border-radius: 0.5rem;
+}
