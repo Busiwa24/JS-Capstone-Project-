@@ -13,7 +13,7 @@ A comment button that opens up a modal and allows users to leave comments.
 - Jest Library
 
 ## Live Demo
-- at http://localhost:8080/
+- https://busiwa24.github.io/JS-Capstone-Project-/dist/
 
 ## Getting Started
 
