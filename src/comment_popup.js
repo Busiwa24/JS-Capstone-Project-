@@ -1,6 +1,6 @@
-import './commentPopup.css';
-import getMeals from './apiGet.js';
-import { Meal, comments } from './commentApi.js';
+import './comment_popup.css';
+import getMeals from './get_api.js';
+import { Meal, comments } from './comment_api.js';
 
 const mainContainer = document.getElementById('home');
 const main = document.getElementById('main');
@@ -17,19 +17,19 @@ const commentPopup = (mealId) => {
     commentPopup.innerHTML = `<button type='button' class='close-btn'>X</button>
                             <div class='comment-container'>
                               <div class='image-div'>
-                                <div class='image-container'><img src="${data.meals[0].strMealThumb}" class='img-fluid'></div>
+                                <div class='image-container'><img src="${data.meals[0].strMealThumb}"></div>
                               </div>
-                              <div class='meal-name'><h2>${data.meals[0].strMeal}</h2></div>
-                              <div class='cuisine'><b>Category:</b> ${data.meals[0].strCategory}</div>
-                              <div class='ingredients'><b> Ingredients:</b> ${data.meals[0].strIngredient1}, ${data.meals[0].strIngredient2}, ${data.meals[0].strIngredient3}, ${data.meals[0].strIngredient4}, ${data.meals[0].strIngredient5}</div>
+                              <div><h2>${data.meals[0].strMeal}</h2></div>
+                              <div><b>Category:</b> ${data.meals[0].strCategory}</div>
+                              <div><b> Ingredients:</b> ${data.meals[0].strIngredient1}, ${data.meals[0].strIngredient2}, ${data.meals[0].strIngredient3}, ${data.meals[0].strIngredient4}, ${data.meals[0].strIngredient5}</div>
                               <div class='flex-div'>
                               <div>
-                                <h3 class='counter'>Comments</h3>
-                                <div class='comment-list' id="${listId}"> </div>
+                                <h3>Comments</h3>
+                                <div id="${listId}"> </div>
                               </div>
                               
-                              <div class="commentForm form-group">
-                                  <div class='add-comment'><h2>Add a comment:</h2></div>
+                              <div class="commentForm">
+                                  <div><h2>Add a comment:</h2></div>
                                   <div><input type="text" id="${data.meals[0].strMeal}" name="name" class="comment-name" placeholder="Your Name"></div><br>
                                   <div> <textarea id="${data.meals[0].strIngredient1}" name="comment-text" class="textarea-comment" placeholder="Your Message"></textarea></div><br>
                                   <div><button type="button" id="${data.meals[0].idMeal}" class="submit" >Add Comment</button></div>

@@ -1,5 +1,5 @@
-import commentPopup from './commentPopup.js';
-import { likes, postLikes } from './likesAPI.js';
+import commentPopup from './comment_popup.js';
+import { likes, postLikes } from './likes_api.js';
 
 const main = document.getElementById('main');
 const header = document.getElementsByTagName('header');
