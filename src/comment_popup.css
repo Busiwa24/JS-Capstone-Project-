@@ -4,7 +4,7 @@
   margin-right: auto;
   top: 0;
   width: 60%;
-  z-index: 2000;
+  z-index: 1000;
   height: auto;
 }
 
@@ -36,12 +36,9 @@
   text-align: center;
 }
 
-.form-control {
-  width: 50%;
-}
-
 .commentForm {
   margin-left: 10px;
+  width: fit-content;
 }
 
 .close-btn {
@@ -60,10 +57,12 @@
 
 .comment-name {
   border-radius: 0.2rem;
+  width: 100%;
 }
 
 .textarea-comment {
   border-radius: 0.2rem;
+  width: 13rem;
 }
 
 .submit {
