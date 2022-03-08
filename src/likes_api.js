@@ -3,7 +3,7 @@ export const postLikes = async (url, mealId) => {
     method: 'POST',
     credentials: 'same-origin',
     headers: {
-      'Content-Type': 'application/json',
+      'Content-Type': 'application/json; charset=UTF-8',
     },
     body: JSON.stringify({
       item_id: mealId,
@@ -12,14 +12,14 @@ export const postLikes = async (url, mealId) => {
   return request;
 };
 
-const getLikes = async (url) => {
+const fetchLikes = async (url) => {
   const request = await fetch(url);
   const result = await request.json();
   return result;
 };
 
 export const likes = (url, span, mealId) => {
-  getLikes(url).then((data) => {
+  fetchLikes(url).then((data) => {
     data = data.filter((item) => item.item_id === mealId);
     span.innerHTML = `${data[0].likes} likes`;
   });

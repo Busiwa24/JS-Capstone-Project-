@@ -1,4 +1,4 @@
-import countComments from './comments_counter.js';
+import counters from './counter.js';
 
 class Meal {
   static async postComment(mealId, name, comment) {
@@ -11,7 +11,7 @@ class Meal {
           username: name,
           comment,
         }),
-        headers: { 'content-type': 'application/json' },
+        headers: { 'content-type': 'application/json; charset=UTF-8' },
       },
     );
 
@@ -20,7 +20,7 @@ class Meal {
     }
   }
 
-  static async getComments(mealId) {
+  static async fetchComments(mealId) {
     const response = await fetch(
       `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/lCZQ9jd97Oj1oy24PzZg/comments?item_id=${mealId}`,
     );
@@ -30,10 +30,10 @@ class Meal {
 }
 
 const comments = (list, mealId) => {
-  Meal.getComments(mealId).then((data) => {
+  Meal.fetchComments(mealId).then((data) => {
     list.innerHTML = '';
     const listHeading = list.previousSibling.previousSibling;
-    const counter = countComments(data);
+    const counter = counters.comments(data);
     if (counter > 0) {
       listHeading.innerHTML = `Comments (${counter})`;
     }

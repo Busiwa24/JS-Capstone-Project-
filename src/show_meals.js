@@ -1,4 +1,4 @@
-import commentPopup from './comment_popup.js';
+import showComment from './show_comments.js';
 import { likes, postLikes } from './likes_api.js';
 
 const main = document.getElementById('main');
@@ -12,15 +12,15 @@ export default (mealsDiv, allMeals) => {
   allMeals.forEach((meal) => {
     const spanId = meal.idMeal + 1;
     const card = `<img src="${meal.strMealThumb}" alt="Food">
-    <div class="mealName flex">
+    <div class="meal-name flex">
       <p>${meal.strMeal}</p>
       <i class="far fa-heart" id="${meal.strMeal}"></i>
     </div>
-    <span class="likes" id="${spanId}">0 likes</span>
-    <button class="comment" id="${meal.idMeal}">Comments</button>`;
+    <span class="meal-likes" id="${spanId}">0 likes</span>
+    <button class="meal-comment" id="${meal.idMeal}">Comments</button>`;
 
     const meals = document.createElement('div');
-    meals.classList.add('mealCard');
+    meals.classList.add('mealBox');
     meals.innerHTML = card;
     mealsDiv.appendChild(meals);
 
@@ -35,7 +35,7 @@ export default (mealsDiv, allMeals) => {
 
     const displayComment = document.getElementById(meal.idMeal);
     displayComment.addEventListener('click', () => {
-      commentPopup(meal.idMeal);
+      showComment(meal.idMeal);
       main.style.display = 'none';
       header[0].style.display = 'none';
       footer[0].style.display = 'none';
