@@ -13,7 +13,7 @@ A comment button that opens up a modal and allows users to leave comments.
 - Jest Library
 
 ## Live Demo
-- https://busiwa24.github.io/JS-Capstone-Project-/dist/
+- [project link](https://busiwa24.github.io/JS-Capstone-Project-/dist/)
 
 ## Getting Started
 
@@ -32,13 +32,13 @@ A comment button that opens up a modal and allows users to leave comments.
 
 ## Authors
 
-👤 **Author1**
+👤 **Mohamed Badr**
 
 - GitHub: (https://github.com/mbdesigns1989)
 - Twitter: (https://twitter.com/mohamed66083152)
 - LinkedIn: (https://www.linkedin.com/in/mohamed-badr-27b26a212/)
 
-## Author 2
+👤 **Busiwa Liuma**
 
 - GitHub: (https://github.com/Busiwa24) 
 - Twitter: (https://twitter.com/busiwaliuma) 

@@ -1,23 +1,28 @@
-import './comment_popup.css';
-import getMeals from './get_api.js';
-import { Meal, comments } from './comment_api.js';
+import './show_comments.css';
+ import { Meal, comments } from './comments_api.js';
+
+const fetchMeals = async (url) => {
+  const request = await fetch(`${url}`);
+  const result = await request.json();
+  return result;
+};
 
 const mainContainer = document.getElementById('home');
 const main = document.getElementById('main');
 const header = document.getElementsByTagName('header');
 const footer = document.getElementsByTagName('footer');
 
-const commentPopup = (mealId) => {
-  const url = 'https://www.themealdb.com/api/json/v1/1/lookup.php';
-  getMeals(url, `i=${mealId}`).then((data) => {
+const showComment = (mealId) => {
+  const url = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`;
+  fetchMeals(url).then((data) => {
     const listId = data.meals[0].idMeal + 1;
     mainContainer.innerHTML = '';
-    const commentPopup = document.createElement('div');
-    commentPopup.className = 'popup';
-    commentPopup.innerHTML = `<button type='button' class='close-btn'>X</button>
-                            <div class='comment-container'>
-                              <div class='image-div'>
-                                <div class='image-container'><img src="${data.meals[0].strMealThumb}"></div>
+    const showComment = document.createElement('div');
+    showComment.className = 'showComment';
+    showComment.innerHTML = `<button type='button' class='close-btn'>X</button>
+                            <div class='comment-card'>
+                              <div class='image-box'>
+                                <div class='image-thumb'><img src="${data.meals[0].strMealThumb}"></div>
                               </div>
                               <div><h2>${data.meals[0].strMeal}</h2></div>
                               <div><b>Category:</b> ${data.meals[0].strCategory}</div>
@@ -32,15 +37,15 @@ const commentPopup = (mealId) => {
                                   <div><h2>Add a comment:</h2></div>
                                   <div><input type="text" id="${data.meals[0].strMeal}" name="name" class="comment-name" placeholder="Your Name"></div><br>
                                   <div> <textarea id="${data.meals[0].strIngredient1}" name="comment-text" class="textarea-comment" placeholder="Your Message"></textarea></div><br>
-                                  <div><button type="button" id="${data.meals[0].idMeal}" class="submit" >Add Comment</button></div>
+                                  <div><button type="button" id="${data.meals[0].idMeal}" class="submit-btn" >Add Comment</button></div>
                               </div>
                               </div>
                             </div>`;
 
-    mainContainer.appendChild(commentPopup);
+    mainContainer.appendChild(showComment);
     const closeBtn = document.querySelector('.close-btn');
     closeBtn.addEventListener('click', () => {
-      commentPopup.remove();
+      showComment.remove();
       main.style.display = 'block';
       header[0].style.display = 'flex';
       footer[0].style.display = 'block';
@@ -64,4 +69,4 @@ const commentPopup = (mealId) => {
   });
 };
 
-export default commentPopup;
+export default showComment;
